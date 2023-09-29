@@ -1,4 +1,5 @@
 #!/usr/bin/env python3  
+from vuelo import Vuelo
 
 while True:
     modo = input("¿Qué modo deseas: crear, leer, actualizar o borrar(c r u d)? o 's' para salir: ")
@@ -9,17 +10,16 @@ while True:
     match modo:
         case "c":
             print("Modo 1: Crear")
-            crear.crear()
+            #crear.crear()
         case "r":
             print("Modo 2: Leer")
-            leer.leer()
+            #leer.leer()
         case "u":
             print("Modo 3: Actualizar")
-            actualizar.actualizar()
+            #actualizar.actualizar()
         case "d":
             print("Modo 4: Borrar")
-            borrar.borrar()
-                
+            #borrar.borrar()
         case _:
             print("Modo no válido.")
                 
