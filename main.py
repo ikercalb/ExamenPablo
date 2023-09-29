@@ -5,25 +5,25 @@ import actualizar
 import borrar
 
 while True:
-    modo = input("¿Qué modo deseas: crear, leer, actualizar o borrar(c r u d)? o 's' para salir: ")
+    modo = input("¿Qué modo deseas: Información de los vuelos, Añadir un vuelo, Modificar un vuelo existente o Borrar un vuelo (informacion, añadir, modificar borrar)? o 'salir' para salir: ").lower()
         
-    if modo == "s":
+    if modo == "salir":
+        print("Saliendo del programa.")
         break  
-        
+           
     match modo:
-        case "c":
-            print("Modo 1: Crear")
-            crear.crear()
-        case "r":
-            print("Modo 2: Leer")
+        case "informacion":
+            print("Modo 1: Informacion")
             leer.leer()
-        case "u":
-            print("Modo 3: Actualizar")
+        case "añadir":
+            print("Modo 2: Añadir")
+            crear.crear()
+        case "modificar":
+            print("Modo 3: Modificar")
             actualizar.actualizar()
-        case "d":
+        case "borrar":
             print("Modo 4: Borrar")
             borrar.borrar()
-                
         case _:
             print("Modo no válido.")
                 

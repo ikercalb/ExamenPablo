@@ -35,9 +35,7 @@ def crear():
         vuelos=[v1] 
         
     Vuelo.cargar_json(vuelos)
-    
-    
-crear()
+
 
 
 
