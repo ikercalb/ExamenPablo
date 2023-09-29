@@ -8,8 +8,8 @@ def leerFechaValida():
     
     while True:
         try:
-            fecha=input("Introduce una fecha YYYY-MM-DD: ")
-            fecha=datetime.strptime(fecha,'%Y-%m-%d')
+            fecha=input("Introduce una fecha YYYY-MM-DD-HH-MM: ")
+            fecha=datetime.strptime(fecha,'%Y-%m-%d-%H-%M')
             return fecha.timestamp()
         except ValueError:
             print("Error, formato de fecha incorrecto")
@@ -35,7 +35,5 @@ def crear():
         vuelos=[v1] 
         
     Vuelo.cargar_json(vuelos)
-
-
 
 

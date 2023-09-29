@@ -1,8 +1,8 @@
 #!/usr/bin/env python3  
 import leer
 import crear
-import actualizar
 import borrar
+import actualizar
 
 while True:
     modo = input("¿Qué modo deseas: Información de los vuelos, Añadir un vuelo, Modificar un vuelo existente o Borrar un vuelo (informacion, añadir, modificar borrar)? o 'salir' para salir: ").lower()

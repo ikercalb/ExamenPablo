@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import json
 import time
+from datetime import datetime
 
 vuelos = []
 
@@ -29,14 +30,20 @@ class Vuelo:
             "plaza_vuelo": self.plaza_vuelo
         }
         
+    def __str__(self):
+        
+        fecha = datetime.fromtimestamp(self.fecha_vuelo) 
+        return f"Fecha de salida: {fecha} Id del vuelo: {self.id_vuelo} Destino: {self.destino_vuelo} Plazas libres: {self.plaza_vuelo}"
+    
     def cargar_array():
         vuelos.clear()
         try:
             with open("vuelos.json", "r") as archivo:
                 diccionario = json.load(archivo)
                 for d in diccionario:
-                    v1 = Vuelo(d.get("fecha_vuelo"),d.get("id_vuelo"),d.get("destino_vuelo"),d.get("plaza_vuelo"))
+                    v1 = Vuelo(d.get("id_vuelo"),d.get("destino_vuelo"), d.get("fecha_vuelo"),d.get("plaza_vuelo"))
                     vuelos.append(v1)
+                vuelos.sort(key=lambda v: v.fecha_vuelo, reverse=True)
                 return(vuelos)
         except:
             print("No hay vuelos guardados")
