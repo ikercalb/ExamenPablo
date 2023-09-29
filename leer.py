@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-main
+from vuelo import Vuelo
+
+vuelos = []
 
 
 def leer():
@@ -8,8 +10,3 @@ def leer():
             for v in vuelos:
                 print(v)
     
-
-
-
-leer()
-   
