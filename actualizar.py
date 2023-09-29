@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from clase import Vuelo
+from vuelo import Vuelo
 
 
 
