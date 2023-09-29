@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-from clase import Vuelo
-vuelos = []
+main
 
 
 def leer():
