@@ -2,7 +2,9 @@
 import re
 from datetime import datetime
 from vuelo import Vuelo
-from vuelo import array_vuelos
+import crear
+import leer
+import actualizar
 import borrar
 import json
 import os
@@ -40,7 +42,6 @@ while True:
         case "d":
             print("Modo 4: Borrar")
             borrar.borrar()
-                
         case _:
             print("Modo no válido.")
                 
