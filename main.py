@@ -1,4 +1,8 @@
 #!/usr/bin/env python3  
+import leer
+import crear
+import actualizar
+import borrar
 
 while True:
     modo = input("¿Qué modo deseas: crear, leer, actualizar o borrar(c r u d)? o 's' para salir: ")

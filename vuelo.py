@@ -42,7 +42,7 @@ class Vuelo:
             print("No hay vuelos guardados")
 
     def cargar_json(array_vuelos):
-        personas_dict = [v.to_dict() for v in array_vuelos]
+        personas_dict = [v.to_diccionario() for v in array_vuelos]
         text_file = open("vuelos.json", "w")
         json_data = json.dumps(personas_dict)
         text_file.write(json_data)
